@@ -9,10 +9,10 @@ const express = require('express');
 const app = express();
 
 // Define el puerto en el que el servidor escuchará, usando una variable de entorno o el puerto 3002 por defecto
-const puerto = process.env.PORT || 3002;
+const puerto = process.env.PORT || 4002;
 
 // Importa las rutas de tareas desde el archivo task.router
-const taskroutes = require("./routes/task.router");
+const taskroutes = require("./routes/taskRoutes");
 
 // Middleware para parsear el cuerpo de las solicitudes como JSON
 app.use(express.json());
