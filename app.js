@@ -9,7 +9,7 @@ const express = require('express');
 const app = express();
 
 // Define el puerto en el que el servidor escuchará, usando una variable de entorno o el puerto 3002 por defecto
-const puerto = process.env.PORT || 4002;
+const puerto = process.env.PORT || 3002;
 
 // Importa las rutas de tareas desde el archivo task.router
 const taskroutes = require("./routes/taskRoutes");
@@ -30,5 +30,6 @@ app.listen(puerto,
     (err, res) => {
         mongoose.connect(process.env.MONGOCONNECTION)
         console.log("¡Conexión exitosa a la base de datos y servidor en funcionamiento!")
+        console.log(process.env.MONGOCONNECTION)
     }
 );
