@@ -1,5 +1,5 @@
 {
-  "name": "express1",
+  "name": "express-2",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -9,6 +9,7 @@
   "license": "ISC",
   "description": "Universidad Nacional de Villa Mercedes",
   "dependencies": {
-    "express": "^4.21.1"
+    "express": "^4.21.2",
+    "mongoose": "^8.8.4"
   }
 }
