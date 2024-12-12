@@ -37,7 +37,7 @@ module.exports.createTask = (req, res) => {
  * @param {Object} req - Objeto de solicitud HTTP
  * @param {Object} res - Objeto de respuesta HTTP
  */
-module.exports.getTasks = (req, res) => {
+module.exports.getAllTasks = (req, res) => {
     Task.find()
         .then((tasks) => {
             res.status(200).json(tasks);
@@ -55,7 +55,7 @@ module.exports.getTasks = (req, res) => {
  * @param {Object} req - Objeto de solicitud HTTP
  * @param {Object} res - Objeto de respuesta HTTP
  */
-module.exports.getTaskById = (req, res) => {
+module.exports.getTask = (req, res) => {
     const taskId = req.params.id;
     Task.findOne({ id: taskId })
         .then((task) => {
@@ -74,7 +74,7 @@ module.exports.getTaskById = (req, res) => {
  * @param {Object} req - Objeto de solicitud HTTP
  * @param {Object} res - Objeto de respuesta HTTP
  */
-module.exports.updateTask = (req, res) => {
+module.exports.modifyTask = (req, res) => {
     const taskId = req.params.id;
     const { title, description, start, end, status, geolong, geolat } = req.body;
 
